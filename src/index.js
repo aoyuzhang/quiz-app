@@ -6,7 +6,7 @@ import Quiz from './components/Quiz'
 import {QuizData} from './components/QuizData';
 
 
-// import './index.css';
+import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -18,7 +18,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 function App(){
   return (
-    <div classNmae = "App">
+    <div className = "App">
       <Quiz/>
     </div>
   )
