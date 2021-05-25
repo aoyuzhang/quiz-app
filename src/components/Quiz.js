@@ -59,6 +59,12 @@ class Quiz extends Component{
   }
 
   finishHandler =() => {
+    const {userAnswer, answer, score} = this.state
+    if(userAnswer === answer){
+      this.setState({
+        score: score + 1
+      })
+    }
     if(this.state.currentIndex === QuizData.length -1){
       this.setState({
         quizEnd: true
@@ -101,7 +107,7 @@ class Quiz extends Component{
           onClick = {this.nextQuestionHander}
         >Next Question</button>
       }
-      {currentIndex === QuizData.length - 1 &&
+      {currentIndex === QuizData.length-1 &&
         <button
           className ="ui inverted button"
           disabled = {!this.state.disabled}
